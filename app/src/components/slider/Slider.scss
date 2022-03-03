@@ -1,0 +1,123 @@
+@import "../../assets/scss/vars";
+
+@keyframes headline-dash {
+  0% {
+    stroke-dasharray: 0 1500;
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 1500 1500;
+    opacity: 1;
+  }
+}
+
+.slider {
+  // background-color: black;
+  
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  &.big {
+    height: 99vh;
+  }
+
+  &.small {
+    height: 20vh;
+
+    svg {
+      display: none;
+    }
+  }
+
+  &-title {
+    z-index: 1;
+    h1 {
+      color: $contrast-color;
+      font-weight: 600;
+      font-size: 5vmin;
+      position: relative;
+      text-align: center;
+
+      @media(max-width: 797px) {
+        font-size: 35px;
+      }
+    }
+
+    svg {
+      position: relative;
+      // top: 15vh;
+      // left: 50%;
+      width: calc(60vmin + 20px);
+      height: calc(15vmin + 20px);
+      // -webkit-transform: translate(-50%,-50%);
+      // -ms-transform: translate(-50%,-50%);
+      transform: translate(0%, -80%);
+      overflow: visible;
+      display: block;
+      margin: auto;
+
+      path {
+        stroke: $main-color;
+        stroke-width: 0.2vmin;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        -webkit-animation: elementor-headline-dash forwards;
+        animation: headline-dash forwards;
+        -webkit-animation-duration: var(--animation-duration,1.2s);
+        animation-duration: var(--animation-duration,1.2s);
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+
+        fill: none;
+        opacity: 0;
+        stroke-dasharray: 0 1500;
+        transition: .3s;
+
+        @media(max-width: 797px) {
+          stroke-width: 3px;
+        }
+      }
+    }
+  }
+
+  &-box {
+    z-index: 1;
+    min-width: 50vw;
+    text-align: center;
+  }
+
+  &-subtitle {
+    color: $contrast-color;
+    font-size: 3vmin;
+    font-weight: 600;
+    
+    @media(max-width: 797px) {
+      font-size: 25px;
+    }
+
+    .Typewriter {
+      display: inline;
+
+      span {
+        font-family: $font-family-secondary;
+        color: $main-color;
+        font-size: 3vmin;
+
+        @media(max-width: 797px) {
+          font-size: 25px;
+        }
+      }
+      
+    }
+  }
+
+  &-buttons {
+    display: block;
+    margin-top: 5vh;
+  }
+}

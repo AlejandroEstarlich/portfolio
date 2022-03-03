@@ -1,0 +1,26 @@
+@import "../../assets/scss/vars";
+.articles {
+  display: block;
+  padding: 8vh 0 8vh 0;
+  width: 100%;
+  background-color: $main-color;
+  
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 6vmin;
+    gap: 1vw;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 50%;
+
+    @media(max-width: 797px) {
+      width: 95%;
+    }
+
+    > p {
+      width: 100%;
+    }
+  }
+}

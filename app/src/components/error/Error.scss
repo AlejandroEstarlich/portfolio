@@ -1,0 +1,34 @@
+@import "../../assets/scss/vars";
+
+
+.error {
+  // background-color: black;
+  
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 99vh;
+  background-image: url(../../../public/images/Alejandroestarlich-bg00.jpg);
+
+  &-text {
+    z-index: 1;
+    h1 {
+      color: $main-color;
+      font-weight: 600;
+      font-size: 5vw;
+      position: relative;
+      text-align: center;
+    }
+
+    h2 {
+      color: $contrast-color;
+      font-weight: 600;
+      font-size: 2vw;
+      position: relative;
+      text-align: center;
+    }
+  }
+}

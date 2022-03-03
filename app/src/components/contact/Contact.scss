@@ -1,0 +1,143 @@
+@import "../../assets/scss/vars";
+
+.contact {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 96vh;
+  background-image: url(../../../public/images/contacto.jpg);
+
+  h1 {
+    color: $main-color;
+    font-weight: 600;
+    font-size: 8vmin;
+    position: relative;
+    text-align: center;
+    margin-top: 8vh;
+  }
+
+  &-container {
+    z-index: 1;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin-top: 6vmin;
+  }
+
+  &-form {
+    width: 60%;
+
+    @media(max-width: 1024px) {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 2vw;
+      row-gap: 1vw;
+      color: $contrast-color;
+
+      .form-group {
+        width: 45%;
+
+        @media(max-width: 797px) {
+          width: 100%;
+        }
+
+        &.textarea {
+          width: 100%;
+        }
+
+        .form-control {
+          background: none;
+          border: 0.1vh solid $gray-color;
+          border-width: 0 0 0.1vh 0;
+          border-radius: 0;
+          color: $contrast-color;
+          font-size: 1.5vmin;
+          font-weight: 500;
+
+          @media(max-width: 797px) {
+            font-size: 14px;
+          }
+
+          &::-webkit-input-placeholder, &:-ms-input-placeholder {
+            color: $gray-color;
+            font-size: 1.5vmin;
+            font-weight: 500;
+            font-family: $font-family;
+
+            @media(max-width: 797px) {
+              font-size: 14px;
+            }
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+
+      .form-check {
+        &-label, &-input {
+          color: $contrast-color;
+          font-family: $font-family;
+          font-size: 1.5vmin;
+
+          @media(max-width: 797px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &-box {
+    background-color: $main-color;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+
+    @media(max-width: 1024px) {
+      width: 100%;
+      margin-top: 4vh;
+      padding: 4vh 0;
+    }
+
+    .phone {
+      color: $text-color;
+      font-weight: 600;
+      font-size: 3vmin;
+      font-family: $font-family-secondary;
+
+      @media(max-width: 797px) {
+        font-size: 25px;
+      }
+    }
+
+    .time,
+    .email {
+      span {
+        font-size: 1.2vmin;
+        font-weight: 600;
+
+        @media(max-width: 797px) {
+          font-size: 12px;
+        }
+      }
+      font-size: 1.2vmin;
+      @media(max-width: 797px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../assets/scss/vars";
+
+.form {
+  background-color: $text-color;
+  .title {
+    text-align: center;
+    h1 {
+      color: $main-color;
+      font-weight: 600;
+      font-size: 8vmin;
+      position: relative;
+      text-align: center;
+    }
+  }
+
+  form {
+    @media(max-width: 797px) {
+      width: 95% !important;
+    }
+    label {
+      color: $main-color;
+      font-size: 2.5vmin;
+      margin-bottom: 1vmin;
+
+      @media(max-width: 797px) {
+        font-size: 18px;
+      }
+    }
+
+    input {
+      color: $contrast-color;
+    }
+    .form-group {
+      width: 100%;
+      margin-bottom: 6vmin;
+
+      &.textarea {
+        width: 100%;
+      }
+
+      .form-control,
+      .form-select {
+        background: none;
+        border: 0.2vmin solid $gray-color;
+        border-width: 0 0 0.2vmin 0;
+        border-radius: 0;
+        color: $contrast-color;
+        font-size: 2vmin;
+        font-weight: 500;
+
+        @media(max-width: 797px) {
+          font-size: 14px;
+        }
+
+        option {
+          background-color: $text-color;
+        }
+
+        &::-webkit-input-placeholder, &:-ms-input-placeholder {
+          color: $gray-color;
+          font-size: 1.5vmin;
+          font-weight: 500;
+          font-family: $font-family;
+
+          @media(max-width: 797px) {
+            font-size: 14px;
+          }
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

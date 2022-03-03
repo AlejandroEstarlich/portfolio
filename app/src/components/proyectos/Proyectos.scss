@@ -1,0 +1,25 @@
+@import "../../assets/scss/vars";
+
+.proyectos {
+  background-color: $main-color;
+  text-align: center;
+  padding: 5vh 0;
+
+  &-container {
+    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 6vmin;
+    gap: 1vw;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 3.5vmin;
+
+    @media(max-width: 797px) {
+      font-size: 25px;
+    }
+  }
+}

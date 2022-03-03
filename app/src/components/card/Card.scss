@@ -1,0 +1,49 @@
+@import "../../assets/scss/vars";
+
+.card {
+  background-size: cover;
+  border-radius: 0.5vw !important;
+  overflow: hidden;
+
+  h3 {
+    color: $main-color;
+    font-size: 3vmin;
+    text-align: center;
+
+    @media(max-width: 797px) {
+      font-size: 15px;
+    }
+  }
+
+  p {
+    color: $contrast-color;
+    margin-bottom: 6vmin;
+  }
+
+  &-front {
+    position: relative;
+    display: flex;
+    height: 30vh;
+    width: 15vw;
+    padding: 1vh 1vw;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 1024px) {
+      width: 30vw;
+    }
+
+  }
+  &.hidden {
+    position: relative;
+    // display: flex;
+    display: inline;
+    min-height: 100%;
+    background: none;
+    border: none;
+  }
+  &-content {
+    z-index: 1;
+    max-height: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../assets/scss/vars";
+
+.page {
+  &-link {
+    border: none !important;
+    color: $text-color !important;
+    cursor: pointer !important;
+    background: none !important;
+    
+
+    &:hover {
+      color: $main-color !important;
+      background-color: $text-color !important;
+    }
+  }
+
+  &-item {
+    border-radius: 99vw;
+    overflow: hidden;
+    margin: 0 1vw;
+  }
+}
